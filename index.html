@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Studio | Web Design, Build &amp; Search</title>
+  <meta name="description" content="Placeholder studio site: web design, development, search and branding. Replace this copy with your own before publishing." />
+  <meta name="theme-color" content="#07121a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230003e8'/%3E%3Cpath d='M9 21l7-10 7 10' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 1c.6 6.2 4.8 10.400 11 11-6.200.6-10.400 4.800-11 11-.6-6.200-4.800-10.400-11-11 6.200-.6 10.400-4.800 11-11z" fill="currentColor"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#0003e8"/><path d="M9 21l7-10 7 10" fill="none" stroke="#fff" stroke-width="3.200" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-laurel" viewBox="0 0 40 64"><g fill="currentColor"><ellipse cx="27" cy="8" rx="4" ry="8" transform="rotate(38 27 8)"/><ellipse cx="18" cy="17" rx="4" ry="8" transform="rotate(52 18 17)"/><ellipse cx="12" cy="28" rx="4" ry="8" transform="rotate(72 12 28)"/><ellipse cx="11" cy="40" rx="4" ry="8" transform="rotate(98 11 40)"/><ellipse cx="16" cy="51" rx="4" ry="8" transform="rotate(124 16 51)"/><ellipse cx="26" cy="59" rx="4" ry="7" transform="rotate(150 26 59)"/></g></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.500 5l-3 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.500" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 4h12l4 6-10 11L2 10z M2 10h20 M9 4l-2 6 5 11 5-11-2-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="10" r="1.800" fill="currentColor"/><path d="M4 18l5.500-5 4 3.500 3-2.500 4 3.500" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.500 7-12a7 7 0 10-14 0c0 5.500 7 12 7 12z" fill="currentColor"/><circle cx="12" cy="10" r="2.600" fill="#191919"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3" fill="currentColor"/><path d="M4 8l8 6 8-6" fill="none" stroke="#191919" stroke-width="1.800" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <div class="loader" id="loader" aria-hidden="true"><svg><use href="#i-mark"/></svg><span>Your Studio</span></div>
+
+  <header class="site-header" id="header">
+    <a href="#top" class="brand" aria-label="Your Studio, back to top"><svg><use href="#i-mark"/></svg><span>Your Studio</span></a>
+    <button class="menu-btn" id="menu-open" aria-expanded="false" aria-controls="menu">
+      <span>Menu</span><span class="menu-btn-dot" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site navigation" hidden>
+    <div class="menu-top"><span class="eyebrow">Navigation</span><button class="menu-close" id="menu-close">Close</button></div>
+    <nav class="menu-nav">
+      <a href="#work"><small>01</small>Work</a>
+      <a href="#services"><small>02</small>Services</a>
+      <a href="#about"><small>03</small>About</a>
+      <a href="#process"><small>04</small>Process</a>
+      <a href="#faq"><small>05</small>FAQs</a>
+      <a href="#contact"><small>06</small>Contact</a>
+    </nav>
+    <div class="menu-bottom"><a href="mailto:hello@example.com">hello@example.com</a><span>Support: +00 000 000 000</span></div>
+  </div>
+
+  <main>
+    <!-- HERO FLIGHT -->
+    <section class="flight" id="top">
+      <div class="flight-sticky">
+        <div class="flight-view" id="flight-view" aria-hidden="true">
+          <canvas id="flight-canvas"></canvas>
+          <div class="flight-scrim" id="flight-scrim"></div>
+        </div>
+
+        <div class="beat is-on" data-beat>
+          <h1 class="beat-title">Websites that <em>feel alive.</em></h1>
+          <p class="beat-lead">Launch Nest is a design, build and SEO studio in Adelaide, working with businesses across Australia.</p>
+          <div class="beat-actions">
+            <a href="#contact" class="pill"><span class="btn-label" data-roll>Start a project</span><span class="pill-ico"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span></a>
+            <a href="#work" class="link-line">See the work</a>
+          </div>
+        </div>
+        <div class="beat low gold" data-beat>
+          <h2 class="beat-title">Yours won’t need <em>dragons.</em></h2>
+          <p class="beat-lead">It just needs to feel like somewhere worth the trip.</p>
+        </div>
+        <div class="beat low" data-beat>
+          <h2 class="beat-title">None of this is <em>video.</em></h2>
+          <p class="beat-lead">Your device is drawing it live, frame by frame.</p>
+        </div>
+        <div class="beat low night" data-beat>
+          <h2 class="beat-title">Designed, built and <em>found.</em></h2>
+          <p class="beat-lead">One team for the look, the build and the search work that brings people in.</p>
+        </div>
+        <div class="landing" id="landing">
+          <h2>Now for the <em>real work.</em></h2>
+          <div class="tiles">
+            <a href="#work" class="tile"><figure><img src="/images/ws4amg82ncHwc5izuYrR6m7k3c.png" alt="Aether" loading="lazy" /></figure><span>Aether</span></a>
+            <div class="tile tile-live" id="tile-live"><figure></figure><span>The one you just flew through</span></div>
+            <a href="#work" class="tile"><figure><img src="/images/Y8CuMjp97ZIPwsYO7FCiwfWCuw.png" alt="Noct" loading="lazy" /></figure><span>Noct</span></a>
+            <a href="#work" class="tile"><figure><img src="/images/2qCpz8LhSsfuwNGPFUJWJDsT8A.png" alt="Sora Living" loading="lazy" /></figure><span>Sora Living</span></a>
+            <a href="#work" class="tile"><figure><img src="/images/7hQXtXjg3yy0QIhemR4kqWrrym8.png" alt="Forma" loading="lazy" /></figure><span>Forma</span></a>
+            <div class="tile tile-cta"><a href="#work" class="pill"><span class="btn-label" data-roll>Read our case studies</span><span class="pill-ico"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span></a></div>
+          </div>
+        </div>
+        <div class="flight-hint" id="flight-hint"><i></i>Scroll to fly in</div>
+      </div>
+    </section>
+
+    <!-- STRIP -->
+    <div class="strip" data-theme="dark"><span>Design</span><svg><use href="#i-star"/></svg><span>Build</span><svg><use href="#i-star"/></svg><span>Search</span><svg><use href="#i-star"/></svg><span>Brand</span></div>
+
+    <!-- ABOUT -->
+    <section class="about wrap" id="about">
+      <div class="about-l">
+        <h2 class="h-sm" data-split>Bringing your idea to life with strategy, design and code</h2>
+        <hr />
+        <p data-reveal>We close the gap between what you want to build and the people you want to reach. Designers, developers and strategists work as one team to turn a clear idea into a site that looks right and performs underneath.</p>
+        <p data-reveal style="--d:1">New launch or established business, you get the full toolkit: a brand people recognise, a website built to convert, search work that brings visitors in, and support after go-live.</p>
+        <div class="laurels" data-reveal style="--d:2">
+          <svg><use href="#i-laurel"/></svg>
+          <div><b>Independent, founder-led</b><span>Web design, development, search and branding.</span></div>
+          <svg class="flip"><use href="#i-laurel"/></svg>
+        </div>
+      </div>
+      <div class="about-r">
+        <h2 class="h-sm" data-split>Our values</h2>
+        <div class="frame">
+          <article class="vcard" data-reveal><h3>Customer first</h3><p>Every plan is built around your goals, your customers and your market, not a template.</p></article>
+          <article class="vcard" data-reveal style="--d:1"><h3>Results driven</h3><p>We measure the work by numbers that matter: visits, enquiries and revenue.</p></article>
+          <article class="vcard" data-reveal style="--d:2"><h3>True collaboration</h3><p>We work as your partner, not just a supplier. Your result is our reputation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-row"><div class="marquee-set"></div><div class="marquee-set"></div></div>
+      <div class="marquee-row rev"><div class="marquee-set"></div><div class="marquee-set"></div></div>
+    </section>
+
+    <!-- WHY -->
+    <section class="why" id="why">
+      <div class="wrap center">
+        <h2 class="h-lg" data-split>Why businesses choose to work with us</h2>
+        <p data-reveal>We blend design, strategy and technology into work that stands out.</p>
+      </div>
+      <div class="wrap">
+        <div class="frame frame-white why-grid" data-reveal>
+          <article class="wcard w-dark right"><h3>Everything under one roof</h3><p>No juggling agencies. Design, development, search and marketing all pull toward the same goal.</p></article>
+          <div class="wcol">
+            <article class="wcard w-indigo"><h3>Built around your business</h3><p>A plan shaped by how you actually sell and who you sell to.</p></article>
+            <article class="wcard w-light"><h3>Full-service, in-house</h3><p>Design, development, search and marketing from one team.</p></article>
+          </div>
+          <article class="wcard w-dark alt"><h3>Flexible engagement</h3><p>From a single project to an ongoing retainer, sized to your needs and budget.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="h-lg" data-split>Full-service digital work for growing businesses</h2>
+          <div>
+            <p data-reveal>From the first brand touchpoint to the page that converts best, these services are built to work together.</p>
+            <a href="#contact" class="btn" data-reveal><span class="btn-label" data-roll>More services</span><span class="btn-ico"><svg><use href="#i-arrow"/></svg></span></a>
+          </div>
+        </div>
+        <article class="srow" data-reveal>
+          <ul class="schips"><li>Responsive design</li><li>CMS integration</li><li>E-commerce builds</li></ul>
+          <div class="sjoin"><svg><use href="#i-star"/></svg><span class="sicon" style="--g:linear-gradient(135deg,#4c6fff,#7a3cff)"><svg><use href="#i-code"/></svg></span><svg><use href="#i-star"/></svg></div>
+          <h3 class="stitle">Web design &amp; development</h3>
+        </article>
+        <article class="srow" data-reveal>
+          <ul class="schips"><li>Technical audits</li><li>Local search</li><li>Keyword and topic mapping</li><li>On-page optimisation</li></ul>
+          <div class="sjoin"><svg><use href="#i-star"/></svg><span class="sicon" style="--g:linear-gradient(135deg,#ff8a3c,#ff3c7a)"><svg><use href="#i-search"/></svg></span><svg><use href="#i-star"/></svg></div>
+          <h3 class="stitle">Search optimisation</h3>
+        </article>
+        <article class="srow" data-reveal>
+          <ul class="schips"><li>Logo design</li><li>Strategy and positioning</li><li>Visual identity system</li><li>Brand guidelines</li><li>Social brand assets</li></ul>
+          <div class="sjoin"><svg><use href="#i-star"/></svg><span class="sicon" style="--g:linear-gradient(135deg,#c93cff,#ff3ca0)"><svg><use href="#i-gem"/></svg></span><svg><use href="#i-star"/></svg></div>
+          <h3 class="stitle">Branding &amp; identity</h3>
+        </article>
+        <article class="srow" data-reveal>
+          <ul class="schips"><li>Pitch decks</li><li>Print and digital ads</li><li>Motion graphics</li><li>Custom illustration</li></ul>
+          <div class="sjoin"><svg><use href="#i-star"/></svg><span class="sicon" style="--g:linear-gradient(135deg,#14c98b,#1296d6)"><svg><use href="#i-image"/></svg></span><svg><use href="#i-star"/></svg></div>
+          <h3 class="stitle">Graphic design</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- SELECTED PROJECTS -->
+    <section class="work" id="work">
+      <div class="wrap">
+        <div class="work-head">
+          <h2 class="h-lg" data-split>Selected projects.</h2>
+          <p data-reveal>A closer look at work designed and built for businesses in different industries.</p>
+        </div>
+        <article class="prow">
+          <a href="#contact" class="pshot" data-reveal><img src="/images/ws4amg82ncHwc5izuYrR6m7k3c.png" alt="Aether interface concept" loading="lazy" decoding="async" /></a>
+          <div class="pinfo" data-reveal style="--d:1">
+            <h3>Aether</h3>
+            <p>A product site that makes AI tools easier to navigate. The build moves from positioning into a focused landing page.</p>
+            <div class="pcat"><b>Product</b><span>/ software</span></div>
+            <ul><li>Website design</li><li>Web development</li><li>Product positioning</li><li>Interface direction</li><li>Mobile optimisation</li></ul>
+            <a href="#contact" class="btn-wide">Read the case study</a>
+            <a href="#contact" class="plink">Visit the live site <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="prow">
+          <a href="#contact" class="pshot" data-reveal><img src="/images/Y8CuMjp97ZIPwsYO7FCiwfWCuw.png" alt="Noct fashion website concept" loading="lazy" decoding="async" /></a>
+          <div class="pinfo" data-reveal style="--d:1">
+            <h3>Noct</h3>
+            <p>An independent fashion label given an editorial voice. Art direction and type lead into a responsive storefront.</p>
+            <div class="pcat"><b>Fashion</b><span>/ e-commerce</span></div>
+            <ul><li>Art direction</li><li>Website design</li><li>Web development</li><li>Catalogue structure</li><li>Mobile optimisation</li></ul>
+            <a href="#contact" class="btn-wide">Read the case study</a>
+            <a href="#contact" class="plink">Visit the live site <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="prow">
+          <a href="#contact" class="pshot" data-reveal><img src="/images/2qCpz8LhSsfuwNGPFUJWJDsT8A.png" alt="Sora Living architecture showcase" loading="lazy" decoding="async" /></a>
+          <div class="pinfo" data-reveal style="--d:1">
+            <h3>Sora Living</h3>
+            <p>An architecture practice that speaks through space and imagery, with a project-led structure that ends in an enquiry.</p>
+            <div class="pcat"><b>Architecture</b><span>/ local service</span></div>
+            <ul><li>Website design</li><li>Web development</li><li>Enquiry flow</li><li>Local search</li><li>Mobile optimisation</li></ul>
+            <a href="#contact" class="btn-wide">Read the case study</a>
+            <a href="#contact" class="plink">Visit the live site <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="prow">
+          <a href="#contact" class="pshot" data-reveal><img src="/images/7hQXtXjg3yy0QIhemR4kqWrrym8.png" alt="Forma brand system" loading="lazy" decoding="async" /></a>
+          <div class="pinfo" data-reveal style="--d:1">
+            <h3>Forma</h3>
+            <p>A distinct point of view turned into a brand system, from identity exploration through to the marketing site.</p>
+            <div class="pcat"><b>Brand</b><span>/ in-house platform</span></div>
+            <ul><li>Identity</li><li>Art direction</li><li>Marketing site</li><li>Content structure</li></ul>
+            <a href="#contact" class="btn-wide">Read the case study</a>
+            <a href="#contact" class="plink">Visit the live site <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <div class="center"><a href="#contact" class="btn"><span class="btn-label" data-roll>See all our work</span><span class="btn-ico"><svg><use href="#i-arrow"/></svg></span></a></div>
+      </div>
+    </section>
+
+    <!-- COLLABORATION -->
+    <section class="collab wrap" id="collab">
+      <h2 class="h-sm" data-split>We believe in the power of collaboration</h2>
+      <div class="logos" data-reveal>
+        <div>Client logo</div><div>Client logo</div><div>Client logo</div><div>Client logo</div><div>Client logo</div>
+      </div>
+      <a href="#contact" class="spin-badge" aria-label="Start a project">
+        <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#circ">START A PROJECT • START A PROJECT • </textPath></text></svg>
+        <span><svg><use href="#i-arrow"/></svg></span>
+      </a>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" data-theme="dark">
+      <div class="cta-boost wrap">
+        <h2><span data-par="-1">Boost your</span><span data-par="1">business</span></h2>
+        <p>End-to-end digital services for businesses everywhere</p>
+        <div class="cta-tags"><span>Web design</span><span>Logo design</span><span>Web development</span><span>App design</span><span>Digital marketing</span></div>
+      </div>
+      <div class="cta-stage wrap">
+        <div class="socials"><a href="#">Instagram <svg><use href="#i-right"/></svg></a><a href="#">LinkedIn <svg><use href="#i-right"/></svg></a><a href="#">Behance <svg><use href="#i-right"/></svg></a></div>
+        <div class="float f1" data-float="0.12"><img src="/images/Y8CuMjp97ZIPwsYO7FCiwfWCuw.png" alt="" loading="lazy" /></div>
+        <div class="float f2" data-float="-0.1"><img src="/images/2qCpz8LhSsfuwNGPFUJWJDsT8A.png" alt="" loading="lazy" /></div>
+        <h2 class="cta-big">Let’s work <span>together!</span></h2>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-white"><span class="btn-label" data-roll>Get started today</span><span class="btn-ico"><svg><use href="#i-arrow"/></svg></span></a>
+          <a href="#contact" class="btn btn-line"><span class="btn-label" data-roll>Book an appointment</span><span class="btn-ico"><svg><use href="#i-arrow"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" id="process" data-theme="dark">
+      <div class="process-pin">
+        <div class="process-side">
+          <h2 class="h-sm">Our working process</h2>
+          <p>Every engagement is structured, transparent and efficient, so you always know where the project stands and what comes next.</p>
+          <div class="process-count"><b id="step-num">01</b><span>/ 03 Steps</span></div>
+        </div>
+        <div class="process-view">
+          <div class="process-track" id="ptrack">
+            <article class="pstep"><div class="pstep-top"><b>Step 01</b><i></i><span>Explore</span></div><h3>Discover &amp; plan</h3><hr /><p>We learn your business, your goals, your competitors and your audience, then set a clear plan tied to outcomes you can measure.</p></article>
+            <article class="pstep"><div class="pstep-top"><b>Step 02</b><i></i><span>Explore</span></div><h3>Design &amp; development</h3><hr /><p>Wireframes and high-fidelity designs for your approval. Once signed off, we build it to match, fast and technically sound.</p></article>
+            <article class="pstep"><div class="pstep-top"><b>Step 03</b><i></i><span>Explore</span></div><h3>Optimise &amp; launch</h3><hr /><p>Full QA, speed work and technical search checks before launch. Then we deploy and watch closely through go-live.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOICES -->
+    <section class="voices" id="voices">
+      <div class="wrap center"><h2 class="h-lg" data-split>What you can expect, from the first call onward.</h2></div>
+      <div class="vcols wrap" id="vcols">
+        <div class="vcol">
+          <article class="voice"><h3>A plan you can read in five minutes. ✨</h3><p>Before any design starts you get scope, timeline and price on one page, in plain language.</p><footer><i>01</i><div><b>Clear scope</b><span>Before kickoff</span></div></footer></article>
+          <article class="voice"><h3>An update every week.</h3><p>What shipped, what is next and anything we need from you. No chasing for news.</p><footer><i>02</i><div><b>Weekly cadence</b><span>During the build</span></div></footer></article>
+        </div>
+        <div class="vcol rev">
+          <article class="voice"><h3>Search built in, not bolted on. 🌍</h3><p>Structure, speed and content are planned for search from the first wireframe, so the site can be found on launch day.</p><footer><i>03</i><div><b>Found on launch</b><span>From day one</span></div></footer></article>
+          <article class="voice"><h3>Designs you sign off first.</h3><p>Nothing is built until you have seen it and agreed. Changes are cheap on a mock-up and expensive in code.</p><footer><i>04</i><div><b>No surprises</b><span>At every stage</span></div></footer></article>
+        </div>
+        <div class="vcol">
+          <article class="voice"><h3>Enquiries you can trace. 🚀</h3><p>Forms and calls are tracked, so you can see what the site is bringing in.</p><footer><i>05</i><div><b>Tracked results</b><span>After launch</span></div></footer></article>
+          <article class="voice"><h3>Support that stays.</h3><p>Fixes, tuning and new ideas as the numbers come in. We do not disappear at handover.</p><footer><i>06</i><div><b>Ongoing care</b><span>Long term</span></div></footer></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITY + FAQ -->
+    <section class="darksplit" id="faq" data-theme="dark">
+      <div class="wrap darksplit-grid">
+        <div class="cap">
+          <h2 class="h-sm" data-split>Built around real capability</h2>
+          <div class="orb" aria-hidden="true"><svg class="l"><use href="#i-laurel"/></svg><svg class="r"><use href="#i-laurel"/></svg></div>
+          <ul><li>Independent digital studio</li><li>Web design, development, search and branding</li><li>Working with businesses everywhere</li></ul>
+        </div>
+        <div class="faq-main">
+          <h2 class="h-sm" data-split>Learn more from FAQs</h2>
+          <div class="tabs" role="tablist">
+            <button role="tab" aria-selected="true" data-tab="ask">Ask</button>
+            <button role="tab" aria-selected="false" data-tab="career">Job career</button>
+            <button role="tab" aria-selected="false" data-tab="pricing">Pricing &amp; plan</button>
+          </div>
+          <div class="acc" id="acc"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact wrap" id="contact">
+      <div class="contact-cards">
+        <article class="ccard" data-reveal>
+          <h3>Need more assistance?</h3><p>Book a personalised call</p>
+          <a href="mailto:hello@example.com?subject=Book%20a%20call" class="btn"><span class="btn-label" data-roll>Schedule a call</span><span class="btn-ico"><svg><use href="#i-arrow"/></svg></span></a>
+          <small>or email us at <a href="mailto:hello@example.com">hello@example.com</a></small>
+        </article>
+        <article class="ccard cc-hi" data-reveal style="--d:1"><span class="avatar">YS</span><p>Hi 👋 we’re the team behind Your Studio</p></article>
+        <article class="ccard cc-glow" data-reveal style="--d:2">
+          <h3>Check our projects</h3>
+          <a href="#work" class="btn btn-glass"><span class="btn-label" data-roll>Get started</span><span class="btn-ico"><svg><use href="#i-arrow"/></svg></span></a>
+        </article>
+      </div>
+      <form class="form" id="form" novalidate data-reveal>
+        <p class="form-pre"><i></i>Prefer email? <a href="mailto:hello@example.com">hello@example.com</a></p>
+        <h3>Tell details about your project</h3>
+        <label class="full"><span>Full name *</span><input name="name" autocomplete="name" required /></label>
+        <label class="full"><span>Your email *</span><input name="email" type="email" autocomplete="email" required /></label>
+        <label><span>Budget *</span>
+          <select name="budget" required><option value="">Select</option><option>Under $2,000</option><option>$2,000 to $5,000</option><option>$5,000 to $10,000</option><option>More than $10,000</option><option>Not sure yet</option></select>
+        </label>
+        <label><span>I’m interested in...</span>
+          <select name="interest"><option value="">Select</option><option>Web design &amp; development</option><option>Search optimisation</option><option>Branding &amp; identity</option><option>Graphic design</option><option>Something else</option></select>
+        </label>
+        <label class="full"><span>Your message</span><textarea name="message" rows="3"></textarea></label>
+        <label class="check full"><input type="checkbox" name="newsletter" /> Subscribe to newsletter</label>
+        <div class="form-foot full">
+          <button class="btn btn-white" type="submit"><span class="btn-label" data-roll>Submit now</span><span class="btn-ico"><svg><use href="#i-arrow"/></svg></span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
+    <!-- JOURNAL -->
+    <section class="journal wrap" id="journal">
+      <div class="sec-head">
+        <h2 class="h-sm" data-split>A peek at what we’ve been working on</h2>
+        <div>
+          <p data-reveal>Notes from the studio on design, build and search, written for people running a business rather than for other designers.</p>
+          <a href="#journal" class="btn" data-reveal><span class="btn-label" data-roll>More articles</span><span class="btn-ico"><svg><use href="#i-arrow"/></svg></span></a>
+        </div>
+      </div>
+      <div class="journal-grid">
+        <article class="jbrand" data-reveal><div class="brand"><svg><use href="#i-mark"/></svg><span>Your Studio</span></div><p>Where ideas take flight</p></article>
+        <div class="jposts">
+          <article class="post" data-reveal style="--d:1">
+            <div class="post-thumb t1"></div>
+            <div><span class="tag">Blog</span><h3>Why your website should feel like a place, not a page</h3><p>What changes when you design the visit instead of the layout…</p><a href="#journal" class="btn"><span class="btn-label" data-roll>Read more</span><span class="btn-ico"><svg><use href="#i-arrow"/></svg></span></a></div>
+          </article>
+          <article class="post" data-reveal style="--d:2">
+            <div class="post-thumb t2"></div>
+            <div><span class="tag">Blog</span><h3>Three things to fix before you spend a cent on ads</h3><p>Speed, a clear offer and one obvious next step come first…</p><a href="#journal" class="btn"><span class="btn-label" data-roll>Read more</span><span class="btn-ico"><svg><use href="#i-arrow"/></svg></span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" data-theme="dark">
+    <div class="footer-top">
+      <div>
+        <a href="#top" class="brand"><svg><use href="#i-mark"/></svg><span>Your Studio</span></a>
+        <p>We provide the complete toolkit: a clear brand identity, a website built to convert, search strategy and ongoing support to keep you growing.</p>
+        <a href="#contact" class="btn btn-white"><span class="btn-label" data-roll>Get in touch</span><span class="btn-ico"><svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+      <div class="fcol"><h3>Address</h3><span><svg><use href="#i-pin"/></svg>Your city, your country</span></div>
+      <div class="fcol"><h3>Contact us</h3><a href="mailto:hello@example.com"><svg><use href="#i-mail"/></svg>hello@example.com</a><a href="mailto:team@example.com"><svg><use href="#i-mail"/></svg>team@example.com</a><span><svg><use href="#i-pin"/></svg>+00 000 000 000</span></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Your Studio. All rights reserved.</span><nav><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#top">Back to top ↑</a></nav></div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
